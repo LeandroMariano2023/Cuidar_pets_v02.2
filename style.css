@@ -1,0 +1,258 @@
+/* ===== BASE & RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Lato", sans-serif;
+    /* Scroll suave para toda a página */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #27391C;
+}
+
+.container {
+    max-width: 61.813rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+/* ===== HEADER & NAVEGAÇÃO ===== */
+header {
+    background-color: #18230F;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Menu Desktop */
+.menu-desktop {
+    display: block;
+}
+
+.headerImageNavegation {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerImageNavegation img {
+    width: 3.75rem;
+    height: 3.125rem;
+}
+
+nav {
+    padding: 1.188rem 1.563rem;
+    width: max-content;
+    border-radius: 0.75rem;
+    display: flex;
+    gap: 6.563rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.563rem;
+}
+
+nav ul li a {
+    color: #255F38;
+}
+
+nav ul li a:hover {
+    color: white;
+    transition-duration: .5s;
+}
+
+nav ul li {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    list-style: none;
+}
+
+.sphere {
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: #008000;
+    border-radius: 999px;
+}
+
+.navegation {
+    padding: 0.813rem 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px 0px #00000042;
+}
+
+/* Menu Mobile */
+span {
+    padding: 0.125rem 0.938rem;
+    margin-right: 0.625rem;
+    border: 1px solid #ddd;
+    /* background: #FFA500; */
+    cursor: pointer;
+    /* font-size: 1rem; */
+    font-weight: bold;
+    /* text-shadow: 1px 1px 1px #ccc; */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+span:hover {
+    background: #ccc;
+    border-color: #999;
+}
+
+span a {
+    color: #255F38;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+.hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.313rem;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 0.625rem;
+}
+
+.hamburguer .linha {
+    width: 0.313rem;
+    height: 0.188rem;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #1F7D53;
+    padding-top: 5rem;
+    transition: right 0.5s ease;
+    z-index: 999;
+}
+
+.nav-mobile.active {
+    right: 0;
+}
+
+.nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-mobile li a {
+    color: #255F38;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    display: block;
+}
+
+/* Transforma hambúrguer em "X" */
+.hamburguer.active .linha:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.active .linha:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .linha:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Transforma hambúrguer em "X" */
+.hamburguer.active .linha:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.active .linha:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .linha:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 43.75rem) {
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 25rem) {
+    .nav-mobile {
+        width: 80%;
+    }
+}
+
+/* ===== SCROLL SUAVE ===== */
+.smooth-scroll {
+    transition: all 0.3s ease;
+}
+
+/* ===== MAIN ====== */
+
+.background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background img{
+    width: 35.625rem;
+    border-radius: 10px;
+    border: 40px solid black;
+}
+
+.background h1{
+    padding-top: 5.625rem;
+    text-align: center;
+    font-size: 9.375rem;
+    color: #59A52C;
+    font-family: "Lato", sans-serif;
+    text-shadow: black 3px 3px;
+}
+
+.background p{
+    font-size: 3.75rem;
+    text-align: center;
+    color: #59A52C;
+    text-shadow: black 3px 3px;
+}

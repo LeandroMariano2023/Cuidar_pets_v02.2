@@ -1,0 +1,552 @@
+/* ===== BASE & RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    /* Scroll suave para toda a página */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #27391C;
+}
+
+.container {
+    max-width: 989px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+/* ===== HEADER & NAVEGAÇÃO ===== */
+header {
+    background-color: #18230F;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/*Menu Desktop ---------------------------------------------------------------*/
+
+#menuDesktop {
+    width: 100%;
+
+}
+
+
+.headerImageNavegation {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav {
+    padding: 19px 25px;
+    width: max-content;
+    border-radius: 12px;
+    display: flex;
+    gap: 105px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #255F38;
+}
+
+nav ul li a:hover {
+    color: white;
+    transition-duration: .5s;
+}
+
+nav ul li {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    list-style: none;
+}
+
+.sphere {
+    width: 10px;
+    height: 10px;
+    background-color: #008000;
+    border-radius: 999px;
+}
+
+.navegation {
+    padding: 13px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 4px 0px #00000042;
+}
+
+.headerImageNavegation img {
+    width: 60px;
+    height: 50px;
+}
+
+.avatar {
+    width: 80px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+
+.avatar1 {
+    color: #255F38;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: "Lato", sans-serif;
+}
+
+
+
+/* Menu Mobile */
+.menu-mobile {
+    display: none;
+}
+
+.hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.hamburguer .linha {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #433f4bf8;
+    padding-top: 80px;
+    transition: right 0.5s ease;
+    z-index: 999;
+}
+
+.nav-mobile.active {
+    right: 0;
+}
+
+.nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-mobile li a {
+    color: #255F38;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    display: block;
+}
+
+/* Transforma hambúrguer em "X" */
+.hamburguer.active .linha:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.active .linha:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .linha:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 800px) {
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-mobile {
+        width: 80%;
+    }
+}
+
+/* ===== SCROLL SUAVE ===== */
+.smooth-scroll {
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+/*------------------------ MAIN-------------------------- */
+#home {
+    background-image: url("crie-um-fundo-com-cachorros-e-gatos-passando-com-p.png");
+    background-position: bottom;
+    background-size: cover;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    height: 650px;
+    position: relative;
+}
+
+#home h1 {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: #255F38;
+    font-size: 100px;
+    padding-left: 45px;
+    text-shadow: black 3px 3px;
+}
+
+#home h2{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: #255F38;
+    font-size: 64px;
+    padding-left: 45px;
+    text-shadow: black 3px 3px;
+}
+
+
+.initialText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*Button Fixed ---------------------------------------------------------------*/
+
+#buttonFixed {
+    position: fixed;
+    /* Isso fixa o botão na tela */
+    bottom: 20px;
+    /* Distância do botão do fundo da tela */
+    left: 20px;
+    /* Distância do botão da esquerda */
+    z-index: 10;
+    /* Garantir que o botão esteja acima de outros elementos */
+}
+
+.buttonFixed a {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: #008000;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.buttonFixed a:hover {
+    background-color: white;
+}
+
+
+/* ------------sobre nos------------ */
+
+.sobreNos-itens {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.sobreNos-texto {
+    width: 511px;
+    text-align: justify;
+}
+
+.sobreNos-title h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 64px;
+    color: #255F38;
+    font-weight: 400;
+    text-shadow: black 3px 3px;
+    text-align: center;
+}
+
+.sobreNos-texto p {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #255F38;
+    padding-bottom: 132px;
+    border-bottom: 5px solid #008000;
+}
+
+/*Você Sabia? ----------------------------------------------------------------*/
+
+
+.voceSabia {
+    background-image: url(assets/img/voceSabiaFundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 104px 0;
+}
+
+.voceSabia-itens {
+    padding: 90px 0px 110px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #255F38;
+    text-align: center;
+
+}
+
+.voceSabia-itens h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    padding-bottom: 49px;
+    text-shadow: black 3px 3px;
+}
+
+.voceSabia-itens h3 {
+    font-family: "Lato", sans-serif;
+    color: #255F38;
+    font-size: 42,5px;
+    font-weight: 400;
+    padding-bottom: 45px;
+}
+
+.voceSabia-itens p {
+    font-size: 20px;
+    color: #255F38;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    max-width: 821px;
+    padding-bottom: 150px;
+}
+
+.voceSabia-itens p a {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    max-width: 821px;
+    color: #255F38;
+    text-decoration: underline;
+
+}
+
+
+/* -------------------serviços------------------ */
+
+#servicos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.servicoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.servicoItens {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 104px;
+}
+
+.servicoItens img {
+    width: 200px;
+    height: 200px;
+}
+
+.servicoList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.textAndServico {
+    width: 100vw;
+}
+
+.servicoTitle {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+.servicoTitle h2 {
+    font-size: 64px;
+    color: #255F38;
+    font-weight: 400;
+    padding-bottom: 150px;
+    text-shadow: black 3px 3px;
+}
+
+.servicoList .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+.servicoList .text img {
+    width: 270px;
+    border-radius: 12px;
+}
+
+.servicoList .text h3 {
+    font-size: 26px;
+    text-align: center;
+    padding-top: 50px;
+    color: #255F38;
+}
+
+.servicoList .text p {
+    width: 290px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 300px;
+    color: #255F38;
+}
+
+
+
+/* ----------------- footer-------------- */
+
+footer {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 25%);
+    margin-top: 46px;
+    background-color: #18230F;
+}
+
+.footerContacts {
+    display: flex;
+    justify-content: center;
+}
+
+
+.containerLista {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 24px;
+}
+
+.containerLista img {
+    width: 129px;
+    height: 99px;
+}
+
+.footerLista h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #255F38;
+}
+
+.lineFooter {
+    width: 72px;
+    height: 2px;
+    background-color: #2E8B57;
+    margin-top: 7px;
+    margin-bottom: 18px;
+}
+
+.footerLista li,
+.footerLista p {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #255F38;
+}
+
+.footerLista li a {
+    color: #255F38;
+}
+
+.footerLista li a:hover {
+    color: #255F38;
+}
+
+.footerLista ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footerLista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+}
